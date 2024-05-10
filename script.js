@@ -9,7 +9,7 @@ function validateSyntax() {
     
 // this regular expression defines a pattern for validating input strings that are intended to represent pet names in a specific format,
 // ensuring they start with "pet_" followed by one or more alphanumeric characters.
-    let  validInput = /^pet_[a-zA-Z0-9]+$/;
+    let validInputRegex = new RegExp(`^${petPrefix}[0-9]{4}+[a-zA-Z]+$`);
     
 
     // TODO: Write your validation logic here
@@ -20,7 +20,7 @@ function validateSyntax() {
 //in the validInput variable.
 // If the input matches the pattern, it sets the result variable to 'Valid Syntax', otherwise, it sets result to 'Invalid Syntax'.
 // Finally, it updates the content of an HTML element with the ID "result" to display the outcome of the syntax.    
-     if (validInput.test(input)) { 
+     if (validInputRegex.test(input)) { 
             result = 'Valid Syntax'
         } else {
             result = 'Invalid Syntax'
