@@ -8,7 +8,7 @@ function validateSyntax() {
         // Check if input starts with 'pet_' and followed by alphanumeric characters
     
     // Input field for users to fill in.The input must be filled in a certain way and order
-    let inputField = /^pet_[a-zA-Z0-9]+$/; 
+    let inputField = /^pet_\d{4}[a-zA-Z0-9]+$/; 
 
        if (inputField.test(input)) {
             result = 'Valid Syntax';  //Input field will result as Valid if users have filled it in the correct way
